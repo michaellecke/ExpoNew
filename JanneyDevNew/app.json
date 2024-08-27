@@ -2,6 +2,9 @@
   "expo": {
     "slug": "janney-online-access",
     "version": "4.0.0",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
     "orientation": "portrait",
     "scheme": "janneyapp",
     "userInterfaceStyle": "automatic",
