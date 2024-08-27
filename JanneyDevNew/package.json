@@ -9,7 +9,6 @@
   },
   "packageManager": "yarn@1.22.22",
   "scripts": {
-    "start": "expo start",
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
@@ -29,7 +28,7 @@
     "startProdMiniMode": "EXPO_PUBLIC_BUILD_ENV=prod npx expo start --no-dev --minify",
     "startProdMode": "EXPO_PUBLIC_BUILD_ENV=prod npx expo start --dev-client --clear",
     "startDevMode": "EXPO_PUBLIC_BUILD_ENV=uat npx expo start --dev-client --clear",
-    "startDev": "yarn startDevMode",
+    "start": "yarn startDevMode",
     "android": "EXPO_PUBLIC_BUILD_ENV=uat npx expo run:android",
     "ios": "EXPO_PUBLIC_BUILD_ENV=uat npx expo run:ios"
   },
