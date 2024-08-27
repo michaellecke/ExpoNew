@@ -3,14 +3,62 @@
     "version": ">= 11.0.1"
   },
   "build": {
-    "development": {
+    "defaults": {
+      "node": "20.17.0",
+      "yarn": "1.22.22"
+    },
+    "dev-defaults": {
+      "extends": "defaults",
+      "distribution": "internal",
       "developmentClient": true,
-      "distribution": "internal"
+      "ios": {
+        "simulator": true,
+        "applicationArchivePath": "ios/build/Build/Products/*-iphonesimulator/*.app"
+      }
+    },
+    "development": {
+      "extends": "dev-defaults",
+      "channel": "development",
+      "env": {
+        "EXPO_PUBLIC_BUILD_ENV": "uat"
+      }
     },
     "preview": {
-      "distribution": "internal"
+      "extends": "defaults",
+      "distribution": "internal",
+      "channel": "preview",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_BUILD_ENV": "prod"
+      }
     },
-    "production": {}
+    "uat": {
+      "extends" : "defaults",
+      "distribution": "internal",
+      "channel": "uat",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_BUILD_ENV": "uat"
+      },
+      "ios": {
+        "image": "latest"
+      }
+    },
+    "production": {
+      "extends": "defaults",
+      "distribution": "store",
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_BUILD_ENV": "prod"
+      },
+      "android": {
+        "gradleCommand": ":app:bundleRelease"
+      }
+    }
   },
   "submit": {
     "production": {}
