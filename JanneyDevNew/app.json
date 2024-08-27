@@ -1,46 +1,72 @@
 {
   "expo": {
-    "name": "JanneyDevNew",
-    "slug": "JanneyDevNew",
-    "version": "1.0.0",
+    "slug": "janney-online-access",
+    "version": "4.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "janneyapp",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "contain"
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "buildVersion": 1,
+      "eas": {
+        "projectId": "1dfea2f8-c389-4cda-9f90-7515bb9ca474"
+      }
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 30000,
+      "enabled": true,
+      "checkAutomatically": "ON_LOAD",
+      "url": "https://u.expo.dev/1dfea2f8-c389-4cda-9f90-7515bb9ca474"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.janneyexpo.JanneyDevNew"
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "This app will optionally use Face ID or Touch ID to save login",
+        "NSCameraUsageDescription": "This application uses the camera to take pictures of Checks and documents",
+        "NSPhotoLibraryAddUsageDescription": "This app needs access to be able to download files to your phone",
+        "NSPhotoLibraryUsageDescription": "This app needs access to be able to download files to your phone",
+        "ITSAppUsesNonExemptEncryption": false,
+        "iCloudContainerEnvironment": "Production"
+      }
     },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.janneyexpo.JanneyDevNew"
+      "permissions": [
+        "INTERNET",
+        "SYSTEM_ALERT_WINDOW",
+        "DOWNLOAD_WITHOUT_NOTIFICATION",
+        "CAMERA",
+        "MANAGE_DOCUMENTS",
+        "READ_EXTERNAL_STORAGE",
+        "USE_FINGERPRINT",
+        "VIBRATE",
+        "WAKE_LOCK",
+        "WRITE_EXTERNAL_STORAGE",
+        "com.htc.launcher.permission.READ_SETTINGS",
+        "com.htc.launcher.permission.UPDATE_SHORTCUT",
+        "com.majeur.launcher.permission.UPDATE_BADGE",
+        "com.sec.android.provider.badge.permission.READ",
+        "com.sec.android.provider.badge.permission.WRITE",
+        "com.sonyericsson.home.permission.BROADCAST_BADGE"
+      ]
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "translucent": false
     },
     "web": {
       "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "output": "static"
     },
     "plugins": [
       "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "extra": {
-      "router": {
-        "origin": false
-      },
-      "eas": {
-        "projectId": "b4d3d0de-bc02-4f83-a76f-fc5a44993363"
-      }
     }
   }
 }

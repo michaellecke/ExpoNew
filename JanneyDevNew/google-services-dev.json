@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "102345184774",
+    "firebase_url": "https://mobile-online-access.firebaseio.com",
+    "project_id": "mobile-online-access",
+    "storage_bucket": "mobile-online-access.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102345184774:android:90c497e5d61e99565e1587",
+        "android_client_info": {
+          "package_name": "com.Janney.MyJanney.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102345184774-ftvg4p78r2tnmkp1csaefe3hg2v4lmut.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDe0hHSXrCHC2CJ4w3WLlRMgBU_nqzUhVk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102345184774-ftvg4p78r2tnmkp1csaefe3hg2v4lmut.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "102345184774-otnuk38tds11g3rcc7l3o50rnu1ultju.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Janney.MyJanney.dev"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
