@@ -10,12 +10,28 @@
   "packageManager": "yarn@1.22.22",
   "scripts": {
     "start": "expo start",
-    "android": "expo run:android",
-    "ios": "expo run:ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
-    "checkBuildDevIOSConfig": "EXPO_PUBLIC_BUILD_ENV=uat eas config --platform=ios --profile=development"
+    "checkBuildDevIOSConfig": "EXPO_PUBLIC_BUILD_ENV=uat eas config --platform=ios --profile=development",
+    "buildDev": "EXPO_PUBLIC_BUILD_ENV=uat eas build -p all --profile=development --clear-cache",
+    "updateDev": "EXPO_PUBLIC_BUILD_ENV=uat eas update --branch development --clear-cache",
+    "channelDev": "eas channel:edit development --branch development",
+    "buildUAT": "EXPO_PUBLIC_BUILD_ENV=uat eas build -p all --profile uat --clear-cache",
+    "updateUAT": "EXPO_PUBLIC_BUILD_ENV=uat eas update --branch uat --clear-cache",
+    "channelUAT": "eas channel:edit uat --branch uat",
+    "buildPreview": "EXPO_PUBLIC_BUILD_ENV=prod eas build -p all --profile preview --clear-cache",
+    "updatePreview": "EXPO_PUBLIC_BUILD_ENV=prod eas update --branch preview --clear-cache",
+    "channelPreview": "eas channel:edit preview-debug --branch preview",
+    "buildProd": "EXPO_PUBLIC_BUILD_ENV=prod eas build -p all --profile production2 --clear-cache",
+    "updateProd": "EXPO_PUBLIC_BUILD_ENV=prod eas update --branch production2 --clear-cache",
+    "channelProd": "EXPO_PUBLIC_BUILD_ENV=prod eas channel:edit production --branch production2",
+    "startProdMiniMode": "EXPO_PUBLIC_BUILD_ENV=prod npx expo start --no-dev --minify",
+    "startProdMode": "EXPO_PUBLIC_BUILD_ENV=prod npx expo start --dev-client --clear",
+    "startDevMode": "EXPO_PUBLIC_BUILD_ENV=uat npx expo start --dev-client --clear",
+    "startDev": "yarn startDevMode",
+    "android": "EXPO_PUBLIC_BUILD_ENV=uat npx expo run:android",
+    "ios": "EXPO_PUBLIC_BUILD_ENV=uat npx expo run:ios"
   },
   "jest": {
     "preset": "jest-expo"
