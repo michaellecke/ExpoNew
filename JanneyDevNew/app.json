@@ -65,6 +65,17 @@
       "output": "static"
     },
     "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "minSdkVersion": 34
+          },
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
       "expo-router"
     ],
     "experiments": {
