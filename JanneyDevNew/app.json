@@ -44,7 +44,6 @@
         "DOWNLOAD_WITHOUT_NOTIFICATION",
         "CAMERA",
         "MANAGE_DOCUMENTS",
-        "READ_EXTERNAL_STORAGE",
         "USE_FINGERPRINT",
         "VIBRATE",
         "WAKE_LOCK",
